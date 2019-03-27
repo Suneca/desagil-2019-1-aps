@@ -18,7 +18,7 @@ public class NandGate extends Gate {
     @Override
     public void connect(int inputPin, SignalEmitter emitter) {
         if (inputPin < 0 || inputPin > 1) {
-            throw new IndexOutOfBoundsException(inputPin);
+            throw new IndexOutOfBoundsException((new Integer(inputPin)).toString());
         }
         emitters[inputPin] = emitter;
     }

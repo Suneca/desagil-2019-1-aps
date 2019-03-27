@@ -20,7 +20,7 @@ public class NotGate extends Gate {
     @Override
     public void connect(int inputPin, SignalEmitter emitter) {
         if (inputPin != 0) {
-            throw new IndexOutOfBoundsException(inputPin);
+            throw new IndexOutOfBoundsException((new Integer(inputPin)).toString());
         }
         nand.connect(0, emitter);
         nand.connect(1, emitter);
